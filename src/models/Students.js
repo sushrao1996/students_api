@@ -4,7 +4,7 @@ const students = [
     FirstName: "Sush",
     LastName: "Mavilla",
     Age: 23,
-    gender: "female",
+    gender: "Female",
     scores: {
       math: 90,
       english: 85,
@@ -17,7 +17,7 @@ const students = [
     FirstName: "Rama",
     LastName: "Devi",
     Age: 44,
-    gender: "female",
+    gender: "Female",
     scores: {
       math: 50,
       english: 85,
@@ -30,7 +30,7 @@ const students = [
     FirstName: "Nagesh",
     LastName: "Rao",
     Age: 53,
-    gender: "male",
+    gender: "Male",
     scores: {
       math: 10,
       english: 60,

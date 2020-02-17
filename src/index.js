@@ -5,6 +5,7 @@ const path = require("path");
 const studentsRouter = require("./routers/studentsRouter");
 const studentRouter = require("./routers/studentRouter");
 const students = require("./models/Students");
+const teachers = require("./models/Teachers");
 const formatIndex = require("./views/helpers/formatindex");
 
 const app = express();
@@ -42,6 +43,44 @@ app.get("/web/students", (req, res) => {
     students
   });
 });
+
+app.get("/web/students/:id", (req, res) => {
+  const { id = "" } = req.params;
+  const requiredStudent = students.find(Student => {
+    if (parseInt(id, 10) === Student.id) return true;
+    else return false;
+  });
+  if (requiredStudent) {
+    res.render("card_s", {
+      layout: "hero",
+      PageTitle: "Student",
+      requiredStudent
+    });
+  }
+});
+app.get("/web/teachers", (req, res) => {
+  res.render("teachers", {
+    layout: "navigation_teachers",
+    PageTitle: "Teachers",
+    teachers
+  });
+});
+
+app.get("/web/teachers/:id", (req, res) => {
+  const { id = "" } = req.params;
+  const requiredTeacher = teachers.find(Teacher => {
+    if (parseInt(id, 10) === Teacher.ID) return true;
+    else return false;
+  });
+  if (requiredTeacher) {
+    res.render("card", {
+      layout: "hero",
+      PageTitle: "Teacher",
+      requiredTeacher
+    });
+  }
+});
+
 app.use("/student", studentRouter);
 app.use("/students", studentsRouter);
 

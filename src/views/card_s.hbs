@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem;">
+  <img
+    src="https://www.netclipart.com/pp/m/136-1362171_student-education-cartoon-school-creative-work-cartoon-student.png"
+    class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{requiredStudent.FirstName}} {{requiredStudent.LastName}}</h5>
+    <p class="card-text">
+      <ul>
+        <li>Age: {{requiredStudent.Age}}</li>
+        <li>Gender: {{requiredStudent.gender}}</li>
+        <li>Math: {{requiredStudent.scores.math}}</li>
+        <li>English: {{requiredStudent.scores.english}}</li>
+        <li>Science: {{requiredStudent.scores.science}}</li>
+        <li>Tamil: {{requiredStudent.scores.tamil}}</li>
+      </ul>
+    </p>
+    <a href="/web/students" class="btn btn-primary">Go Back</a>
+  </div>
+</div>

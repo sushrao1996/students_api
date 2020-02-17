@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Student Details</h1>
+  <h1>Teachers Details</h1>
   <table class="table">
     <thead>
       <tr>
@@ -7,16 +7,18 @@
         <th scope="col">Name</th>
         <th scope="col">Age</th>
         <th scope="col">Gender</th>
+        <th scope="col">Subject</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-      {{#each students}}
+      {{#each teachers}}
       <tr>
         <th scope="row">{{formatIndex @index}}</th>
-        <td><a href="/web/students/{{this.id}}">{{this.FirstName}} {{this.LastName}}</a></td>
+        <td><a href="/web/teachers/{{this.ID}}">{{this.FirstName}} {{this.LastName}}</a></td>
         <td>{{this.Age}}</td>
-        <td>{{this.gender}}</td>
+        <td>{{this.Gender}}</td>
+        <td>{{this.Subject}}</td>
         <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
       </tr>
       {{/each}}
